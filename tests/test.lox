@@ -1,0 +1,44 @@
+
+//var a = false ? 1 : 2;
+//var a = b ?? 0;
+//var b = 5;
+//var a = b ?? 0;
+//print a;
+//b = nil;
+//a = b ?? 0;
+// a = b != nil ? b : 0;
+// print clock();
+class Simple {
+    init(callback) {
+        this.callback = callback;
+    }
+
+    foo() {
+        return this.callback();
+    }
+
+    static bar() {
+        print "called a static function";
+    }
+}
+
+class A {
+    foo() {
+        print "called a function from A";
+    }
+
+    static bar() {
+        print "called a static function from A";
+    }
+
+    bar() {
+        print "called a non-static function from A";
+    }
+}
+
+class B < A { }
+
+B().foo();
+B.bar();
+
+//print fib(7);
